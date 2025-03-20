@@ -1,0 +1,242 @@
+/* General container */
+.landingPageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/public/backgroung_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styling */
+.landingPageContainer nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.landingPageContainer nav .navlist p, 
+.landingPageContainer nav .navlist div {
+  font-size: 1rem;
+}
+
+/* Main landing content */
+.landingMainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10rem;
+  padding: 2rem;
+  gap: 2rem;
+  flex: 1;
+}
+
+/* Text section */
+.landingMainContainer > div:nth-child(1) {
+  flex: 1 1 300px;
+  font-size: 2rem;
+  max-width: 600px;
+}
+
+.landingMainContainer > div:nth-child(1) h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.landingMainContainer > div:nth-child(1) p {
+  font-size: 1.1rem;
+}
+
+/* Button */
+.landingMainContainer > div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Image section */
+.landingMainContainer > div:nth-child(2) {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] {
+    margin: 1rem auto 0;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .landingPageContainer nav h2 {
+    font-size: 1.5rem;
+  }
+
+  .landingPageContainer nav .navlist {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) h1 {
+    font-size: 1.8rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    max-width: 80%;
+  }
+}
+
+
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #0d47a1;
+  color: white;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoutBtn {
+  border-color: white;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background-color: white;
+  color: #0d47a1;
+}
+
+/* Meet Container */
+.meetContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftPanel {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #0d47a1;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.meetingInput {
+  min-width: 250px;
+}
+
+.joinBtn {
+  padding: 10px 20px;
+}
+
+/* Right Panel Image */
+.rightPanel {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.homeImage {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headline {
+      font-size: 1.5rem;
+      text-align: center;
+  }
+
+  .navBar {
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px;
+  }
+}
