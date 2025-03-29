@@ -13,10 +13,9 @@ function HomeComponent() {
     const { addToUserHistory } = useContext(AuthContext);
 
     let handleJoinVideoCall = async () => {
-        if (!meetingCode.trim()) return;
-        await addToUserHistory(meetingCode);
-        navigate(`/${meetingCode}`);
-    };
+        await addToUserHistory(meetingCode)
+        navigate(`/${meetingCode}`)
+    }
 
     return (
         <>
