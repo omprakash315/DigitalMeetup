@@ -15,7 +15,12 @@ const io = connectToSocket(server);
 
 
 app.set("port", (process.env.PORT || 8000))
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://digitalmeetup-7tys.onrender.com/', // Replace with your frontend URL
+  methods: "GET,POST,PUT,DELETE,PATCH",
+  credentials: true // Allow cookies & authorization headers
+}));
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
